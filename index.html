@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi Club — Sushi Artesanal</title>
+  <meta name="description" content="Sushi Club: el mejor sushi artesanal de la ciudad. Ingredientes frescos, ambiente único.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <div class="logo">Sushi<span>Club</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#testimonials">Opiniones</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <button class="nav-cta" data-scroll="#contact">Reservar</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-tag">Sushi Artesanal</p>
+          <h1 class="reveal">El sabor del <span>Japón</span> en cada bocado</h1>
+          <p class="reveal" style="transition-delay:0.1s">Ingredientes frescos, técnica tradicional y un ambiente único para vivir una experiencia gastronómica inolvidable.</p>
+          <div class="hero-buttons reveal" style="transition-delay:0.2s">
+            <button class="btn-primary" data-scroll="#contact">Reservar Mesa</button>
+            <button class="btn-secondary" data-scroll="#menu">Ver Menú</button>
+          </div>
+        </div>
+        <div class="hero-visual reveal-right">
+          <div class="hero-image-wrapper">
+            <img src="images/hero-sashimi.jpg" alt="Sashimi de salmón en forma de rosa — arte culinario japonés" class="hero-image">
+            <div class="hero-image-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <div class="menu-header reveal">
+        <p class="section-label">Nuestro Menú</p>
+        <h2 class="section-title">Descubrí nuestras especialidades</h2>
+        <p class="section-desc">Selección de los mejores cortes de pescado fresco, combinados con arroz premium y los ingredientes más selectos.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card reveal" style="transition-delay:0s">
+          <h3>Salmon Tiradito Nikkei</h3>
+          <p>Cortes finos de salmón fresco, bañados en leche de tigre, ají limo y cebolla morada encurtida.</p>
+          <span class="menu-price">$24.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.04s">
+          <h3>Dragon Roll Crispy</h3>
+          <p>Langostino tempura, palta, queso crema, bañado en salsa ebi y un toque de sésamo negro.</p>
+          <span class="menu-price">$22.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.08s">
+          <h3>Bao Bun de Pork Belly</h3>
+          <p>Panceta de cerdo braseada 8 hs, encurtidos, salsa hoisin y cilantro fresco en pan bao artesanal.</p>
+          <span class="menu-price">$18.000</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.12s">
+          <h3>Poke Bowl Salmon</h3>
+          <p>Dados de salmón fresco, palta, mango, edamame, cebolla crispy y vinagreta de soja y sésamo.</p>
+          <span class="menu-price">$25.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.16s">
+          <h3>Gyozas de Langostino</h3>
+          <p>6 gyozas artesanales rellenas de langostino, jengibre y cebolla de verdeo, con salsa ponzu.</p>
+          <span class="menu-price">$18.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.2s">
+          <h3>Ramen Spicy Miso</h3>
+          <p>Caldo de miso fermentado, noodles artesanales, huevo marinado, cerdo chashu y nori.</p>
+          <span class="menu-price">$27.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.24s">
+          <h3>Sashimi de Salmón Premium</h3>
+          <p>8 cortes de salmón noruego fresco, acompañados de daikon, jengibre y wasabi natural.</p>
+          <span class="menu-price">$33.000</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.28s">
+          <h3>Lomo Saltado Roll</h3>
+          <p>Rollo tempura con lomo salteado, palta, tomate confitado y salsa de tamarindo con un toque ahumado.</p>
+          <span class="menu-price">$23.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.32s">
+          <h3>Tempura de Vegetales</h3>
+          <p>Batata, zucchini, berenjena y morrón en tempura liviana, con salsa tentsuyu y sésamo tostado.</p>
+          <span class="menu-price">$19.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.36s">
+          <h3>Sake Junmai Premium</h3>
+          <p>Botella de sake artesanal japonés, suave y aromático. Servido frío en copa de vidrio.</p>
+          <span class="menu-price">$40.000</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.4s">
+          <h3>Mochi Ice Cream</h3>
+          <p>Mochi de masa de arroz relleno de helado artesanal. Sabores: matcha, mango y maracuyá.</p>
+          <span class="menu-price">$15.500</span>
+        </div>
+        <div class="menu-card reveal" style="transition-delay:0.44s">
+          <h3>Black Cod Misoyaki</h3>
+          <p>Bacalao negro marinado en miso blanco durante 48 hs, glaseado y gratinado al horno. Acompañado de wok de verduras.</p>
+          <span class="menu-price">$44.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          🏯
+        </div>
+        <div class="reveal-right">
+          <p class="section-label">Sobre Nosotros</p>
+          <h2 class="section-title">Tradición que se disfruta</h2>
+          <div class="about-text">
+            <p>En Sushi Club combinamos la tradición culinaria japonesa con ingredientes locales de la más alta calidad. Cada plato es preparado por nuestros chefs con dedicación y respeto por el arte del sushi.</p>
+            <p>Creemos en la frescura como pilar fundamental: el pescado llega diariamente, el arroz se prepara al momento y cada roll se hace por encargo.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <h4>8+</h4>
+              <p>Años de experiencia</p>
+            </div>
+            <div class="stat">
+              <h4>15k</h4>
+              <p>Clientes felices</p>
+            </div>
+            <div class="stat">
+              <h4>50+</h4>
+              <p>Platos exclusivos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="menu-header reveal">
+        <p class="section-label">Galería</p>
+        <h2 class="section-title">Mirá lo que ofrecemos</h2>
+        <p class="section-desc">Cada plato es una obra de arte. Descubrí cómo presentamos nuestras creaciones.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0s;background-image:url('images/sushi_plate.jpg')" data-label="Salmon Tiradito Nikkei"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.04s;background-image:url('images/tuna_rolls.jpg')" data-label="Dragon Roll Crispy"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.08s;background-image:url('images/bao_bun.jpg')" data-label="Bao Bun de Pork Belly"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.12s;background-image:url('images/poke_bowl.jpg')" data-label="Poke Bowl Salmon"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.16s;background-image:url('images/gyoza.jpg')" data-label="Gyozas de Langostino"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.2s;background-image:url('images/ramen.jpg')" data-label="Ramen Spicy Miso"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.24s;background-image:url('images/sashimi_bowl.jpg')" data-label="Sashimi de Salmón Premium"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.28s;background-image:url('images/sushi_tray.jpg')" data-label="Lomo Saltado Roll"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.32s;background-image:url('images/tempura.jpg')" data-label="Tempura de Vegetales"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.36s;background-image:url('images/sake.jpg')" data-label="Sake Junmai Premium"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.4s;background-image:url('images/mochi.jpg')" data-label="Mochi Ice Cream"></div>
+        <div class="gallery-item gallery-img reveal" style="transition-delay:0.44s;background-image:url('images/grilled_fish.jpg')" data-label="Black Cod Misoyaki"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="menu-header reveal">
+        <p class="section-label">Opiniones</p>
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal" style="transition-delay:0s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El mejor sushi que he probado fuera de Japón. La frescura del salmón es incomparable."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <h4>María C.</h4>
+              <p>Cliente frecuente</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.1s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El ambiente es espectacular, ideal para una cita romántica o una salida con amigos."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PL</div>
+            <div>
+              <h4>Pablo L.</h4>
+              <p>Visitó en mayo</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.2s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El ramen tonkotsu me transportó a Tokio. Volveré una y otra vez."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AG</div>
+            <div>
+              <h4>Ana G.</h4>
+              <p>Recomendado por amigos</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.3s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El Lomo Saltado Roll es una locura. Nunca pensé que un sushi nikkei pudiera tener tanto sabor peruano."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">FM</div>
+            <div>
+              <h4>Francisco M.</h4>
+              <p>Fanático del sushi</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.4s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El Mochi de matcha es el postre perfecto. Liviano, cremoso y con ese sabor auténtico que enamora."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SC</div>
+            <div>
+              <h4>Sofía C.</h4>
+              <p>Dulcera profesional</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.5s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El Black Cod Misoyaki es de otro planeta. Se deshace en la boca. Plato de estrella Michelin, sin duda."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DR</div>
+            <div>
+              <h4>Diego R.</h4>
+              <p>Chef gastronómico</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.6s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Pidamos lo que pidamos siempre es una fiesta. El servicio es excelente y la comida llega rápido y perfecta."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LP</div>
+            <div>
+              <h4>Laura P.</h4>
+              <p>Clienta semanal</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.7s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El Poke Bowl Salmon me salva los días de oficina. Fresco, abundante y a un precio súper razonable."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TM</div>
+            <div>
+              <h4>Tomás M.</h4>
+              <p>Delivery recurrente</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.8s">
+          <div class="stars">★★★★★</div>
+          <blockquote>"El Bao Bun de Pork Belly es el mejor que comí en Buenos Aires. La panceta se deshace, el pan es esponjoso perfecto."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JV</div>
+            <div>
+              <h4>Julián V.</h4>
+              <p>Foodie de alma</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / RESERVA -->
+  <section id="contact">
+    <div class="container">
+      <div class="menu-header reveal">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Reservá tu mesa</h2>
+        <p class="section-desc">Viví la experiencia Sushi Club. Reservá ahora o consultanos cualquier duda.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Estamos para vos</h3>
+          <p>No dudes en escribirnos o visitarnos. Te esperamos con los palillos listos.</p>
+          <div class="contact-detail">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Dirección</strong><br>
+              Av. del Sabor 1234, CABA
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">📞</div>
+            <div>
+              <strong>Teléfono</strong><br>
+              +54 11 5555-6789
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">✉️</div>
+            <div>
+              <strong>Email</strong><br>
+              hola@sushiclub.com
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">🕐</div>
+            <div>
+              <strong>Horarios</strong><br>
+              Lun–Sáb: 12:00–23:00<br>
+              Dom: 18:00–23:00
+            </div>
+          </div>
+        </div>
+        <form class="reserva-form reveal-right" novalidate>
+          <h3>Hacé tu reserva</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-nombre">Nombre</label>
+              <input type="text" id="reserva-nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="reserva-email">Email</label>
+              <input type="email" id="reserva-email" name="email" placeholder="tu@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-tel">Teléfono</label>
+              <input type="tel" id="reserva-tel" name="telefono" placeholder="+54 11 5555-1234">
+            </div>
+            <div class="form-group">
+              <label for="reserva-personas">Personas</label>
+              <select id="reserva-personas" name="personas">
+                <option>1 persona</option>
+                <option selected>2 personas</option>
+                <option>3 personas</option>
+                <option>4 personas</option>
+                <option>5+ personas</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reserva-fecha">Fecha</label>
+              <input type="date" id="reserva-fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="reserva-hora">Hora</label>
+              <input type="time" id="reserva-hora" name="hora" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reserva-comentarios">Comentarios</label>
+            <textarea id="reserva-comentarios" name="comentarios" placeholder="Alergias, ocasión especial, preferencias..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Reservar Ahora</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Sushi Club. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
