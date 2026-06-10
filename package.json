@@ -1,0 +1,17 @@
+{
+  "name": "sushi.club",
+  "version": "1.0.0",
+  "description": "Sushi Club Rosario — sitio web",
+  "scripts": {
+    "build:css": "sass scss/main.scss:styles.css --no-source-map",
+    "watch:css": "sass scss/main.scss:styles.css --no-source-map --watch",
+    "build": "npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  }
+}

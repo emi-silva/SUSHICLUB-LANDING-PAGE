@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+// ==============================
+// ANIMACIONES DE REVELACIÓN
+// ==============================
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $slow ease, transform $slow ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity $slow ease, transform $slow ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity $slow ease, transform $slow ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Respetar preferencia de movimiento reducido
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

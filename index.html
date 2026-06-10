@@ -3,39 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sushi Club — Sushi Artesanal</title>
-  <meta name="description" content="Sushi Club: el mejor sushi artesanal de la ciudad. Ingredientes frescos, ambiente único.">
+  <title>Sushi Club — Sushi Artesanal en Rosario</title>
+  <meta name="description" content="Sushi Club: el mejor sushi artesanal de Rosario. Ingredientes frescos, ambiente único. Reservá tu mesa en Blvd. Oroño 70.">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Sushi Club — Sushi Artesanal en Rosario">
+  <meta property="og:description" content="Tradición japonesa con ingredientes locales. Reservá tu mesa en Oroño 70.">
+  <meta property="og:url" content="https://sushiclubrosario.com">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sushi Club — Sushi Artesanal en Rosario">
+  <meta name="twitter:description" content="Tradición japonesa con ingredientes locales. Reservá tu mesa en Oroño 70.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
+  <!-- NAVEGACIÓN -->
+  <nav role="navigation" aria-label="Menú principal">
     <div class="container">
       <div class="logo">Sushi<span>Club</span></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#menu">Menú</a></li>
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#gallery">Galería</a></li>
-        <li><a href="#testimonials">Opiniones</a></li>
-        <li><a href="#contact">Contacto</a></li>
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#menu" role="menuitem">Menú</a></li>
+        <li role="none"><a href="#about" role="menuitem">Nosotros</a></li>
+        <li role="none"><a href="#gallery" role="menuitem">Galería</a></li>
+        <li role="none"><a href="#testimonials" role="menuitem">Opiniones</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contacto</a></li>
       </ul>
       <button class="nav-cta" data-scroll="#contact">Reservar</button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir o cerrar menú de navegación" aria-expanded="false">☰</button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- PORTADA -->
+  <section class="hero" aria-label="Portada principal">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <p class="hero-tag">Sushi Artesanal</p>
+          <p class="hero-tag reveal">Sushi Artesanal</p>
           <h1 class="reveal">El sabor del <span>Japón</span> en cada bocado</h1>
-          <p class="reveal" style="transition-delay:0.1s">Ingredientes frescos, técnica tradicional y un ambiente único para vivir una experiencia gastronómica inolvidable.</p>
-          <div class="hero-buttons reveal" style="transition-delay:0.2s">
+          <p class="reveal">Ingredientes frescos, técnica tradicional y un ambiente único para vivir una experiencia gastronómica inolvidable.</p>
+          <div class="hero-buttons reveal">
             <button class="btn-primary" data-scroll="#contact">Reservar Mesa</button>
             <button class="btn-secondary" data-scroll="#menu">Ver Menú</button>
           </div>
@@ -50,71 +62,72 @@
     </div>
   </section>
 
-  <!-- MENU -->
-  <section id="menu">
+  <!-- MENÚ -->
+  <section id="menu" aria-label="Nuestro menú">
     <div class="container">
       <div class="menu-header reveal">
         <p class="section-label">Nuestro Menú</p>
         <h2 class="section-title">Descubrí nuestras especialidades</h2>
         <p class="section-desc">Selección de los mejores cortes de pescado fresco, combinados con arroz premium y los ingredientes más selectos.</p>
       </div>
+
       <div class="menu-grid">
-        <div class="menu-card reveal" style="transition-delay:0s">
+        <div class="menu-card reveal" data-category="entrada">
           <h3>Salmon Tiradito Nikkei</h3>
           <p>Cortes finos de salmón fresco, bañados en leche de tigre, ají limo y cebolla morada encurtida.</p>
           <span class="menu-price">$24.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.04s">
+        <div class="menu-card reveal" data-category="roll">
           <h3>Dragon Roll Crispy</h3>
           <p>Langostino tempura, palta, queso crema, bañado en salsa ebi y un toque de sésamo negro.</p>
           <span class="menu-price">$22.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.08s">
+        <div class="menu-card reveal" data-category="entrada">
           <h3>Bao Bun de Pork Belly</h3>
           <p>Panceta de cerdo braseada 8 hs, encurtidos, salsa hoisin y cilantro fresco en pan bao artesanal.</p>
           <span class="menu-price">$18.000</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.12s">
+        <div class="menu-card reveal" data-category="bowl">
           <h3>Poke Bowl Salmon</h3>
           <p>Dados de salmón fresco, palta, mango, edamame, cebolla crispy y vinagreta de soja y sésamo.</p>
           <span class="menu-price">$25.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.16s">
+        <div class="menu-card reveal" data-category="entrada">
           <h3>Gyozas de Langostino</h3>
           <p>6 gyozas artesanales rellenas de langostino, jengibre y cebolla de verdeo, con salsa ponzu.</p>
           <span class="menu-price">$18.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.2s">
+        <div class="menu-card reveal" data-category="principal">
           <h3>Ramen Spicy Miso</h3>
           <p>Caldo de miso fermentado, noodles artesanales, huevo marinado, cerdo chashu y nori.</p>
           <span class="menu-price">$27.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.24s">
+        <div class="menu-card reveal" data-category="entrada">
           <h3>Sashimi de Salmón Premium</h3>
           <p>8 cortes de salmón noruego fresco, acompañados de daikon, jengibre y wasabi natural.</p>
           <span class="menu-price">$33.000</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.28s">
+        <div class="menu-card reveal" data-category="roll">
           <h3>Lomo Saltado Roll</h3>
           <p>Rollo tempura con lomo salteado, palta, tomate confitado y salsa de tamarindo con un toque ahumado.</p>
           <span class="menu-price">$23.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.32s">
+        <div class="menu-card reveal" data-category="entrada">
           <h3>Tempura de Vegetales</h3>
           <p>Batata, zucchini, berenjena y morrón en tempura liviana, con salsa tentsuyu y sésamo tostado.</p>
           <span class="menu-price">$19.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.36s">
+        <div class="menu-card reveal" data-category="bebida">
           <h3>Sake Junmai Premium</h3>
           <p>Botella de sake artesanal japonés, suave y aromático. Servido frío en copa de vidrio.</p>
           <span class="menu-price">$40.000</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.4s">
+        <div class="menu-card reveal" data-category="postre">
           <h3>Mochi Ice Cream</h3>
           <p>Mochi de masa de arroz relleno de helado artesanal. Sabores: matcha, mango y maracuyá.</p>
           <span class="menu-price">$15.500</span>
         </div>
-        <div class="menu-card reveal" style="transition-delay:0.44s">
+        <div class="menu-card reveal" data-category="principal">
           <h3>Black Cod Misoyaki</h3>
           <p>Bacalao negro marinado en miso blanco durante 48 hs, glaseado y gratinado al horno. Acompañado de wok de verduras.</p>
           <span class="menu-price">$44.000</span>
@@ -123,12 +136,12 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- NOSOTROS -->
+  <section id="about" aria-label="Sobre nosotros">
     <div class="container">
       <div class="about-grid">
         <div class="about-image reveal-left">
-          🏯
+          <img src="images/about-interior.jpg" alt="Interior del restaurante Sushi Club — ambiente exclusivo y cálido" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loading="lazy">
         </div>
         <div class="reveal-right">
           <p class="section-label">Sobre Nosotros</p>
@@ -156,8 +169,8 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
+  <!-- GALERÍA -->
+  <section id="gallery" aria-label="Galería de platos">
     <div class="container">
       <div class="menu-header reveal">
         <p class="section-label">Galería</p>
@@ -165,31 +178,31 @@
         <p class="section-desc">Cada plato es una obra de arte. Descubrí cómo presentamos nuestras creaciones.</p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0s;background-image:url('images/sushi_plate.jpg')" data-label="Salmon Tiradito Nikkei"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.04s;background-image:url('images/tuna_rolls.jpg')" data-label="Dragon Roll Crispy"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.08s;background-image:url('images/bao_bun.jpg')" data-label="Bao Bun de Pork Belly"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.12s;background-image:url('images/poke_bowl.jpg')" data-label="Poke Bowl Salmon"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.16s;background-image:url('images/gyoza.jpg')" data-label="Gyozas de Langostino"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.2s;background-image:url('images/ramen.jpg')" data-label="Ramen Spicy Miso"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.24s;background-image:url('images/sashimi_bowl.jpg')" data-label="Sashimi de Salmón Premium"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.28s;background-image:url('images/sushi_tray.jpg')" data-label="Lomo Saltado Roll"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.32s;background-image:url('images/tempura.jpg')" data-label="Tempura de Vegetales"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.36s;background-image:url('images/sake.jpg')" data-label="Sake Junmai Premium"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.4s;background-image:url('images/mochi.jpg')" data-label="Mochi Ice Cream"></div>
-        <div class="gallery-item gallery-img reveal" style="transition-delay:0.44s;background-image:url('images/grilled_fish.jpg')" data-label="Black Cod Misoyaki"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/sushi_plate.jpg" data-label="Salmon Tiradito Nikkei" role="button" tabindex="0" aria-label="Ver Salmon Tiradito Nikkei"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/tuna_rolls.jpg" data-label="Dragon Roll Crispy" role="button" tabindex="0" aria-label="Ver Dragon Roll Crispy"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/bao_bun.jpg" data-label="Bao Bun de Pork Belly" role="button" tabindex="0" aria-label="Ver Bao Bun de Pork Belly"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/poke_bowl.jpg" data-label="Poke Bowl Salmon" role="button" tabindex="0" aria-label="Ver Poke Bowl Salmon"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/gyoza.jpg" data-label="Gyozas de Langostino" role="button" tabindex="0" aria-label="Ver Gyozas de Langostino"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/ramen.jpg" data-label="Ramen Spicy Miso" role="button" tabindex="0" aria-label="Ver Ramen Spicy Miso"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/sashimi_bowl.jpg" data-label="Sashimi de Salmón Premium" role="button" tabindex="0" aria-label="Ver Sashimi de Salmón Premium"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/sushi_tray.jpg" data-label="Lomo Saltado Roll" role="button" tabindex="0" aria-label="Ver Lomo Saltado Roll"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/tempura.jpg" data-label="Tempura de Vegetales" role="button" tabindex="0" aria-label="Ver Tempura de Vegetales"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/sake.jpg" data-label="Sake Junmai Premium" role="button" tabindex="0" aria-label="Ver Sake Junmai Premium"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/mochi.jpg" data-label="Mochi Ice Cream" role="button" tabindex="0" aria-label="Ver Mochi Ice Cream"></div>
+        <div class="gallery-item gallery-img reveal" data-src="images/grilled_fish.jpg" data-label="Black Cod Misoyaki" role="button" tabindex="0" aria-label="Ver Black Cod Misoyaki"></div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
+  <!-- OPINIONES -->
+  <section id="testimonials" aria-label="Opiniones de clientes">
     <div class="container">
       <div class="menu-header reveal">
         <p class="section-label">Opiniones</p>
         <h2 class="section-title">Lo que dicen nuestros clientes</h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card reveal" style="transition-delay:0s">
+        <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
           <blockquote>"El mejor sushi que he probado fuera de Japón. La frescura del salmón es incomparable."</blockquote>
           <div class="testimonial-author">
@@ -200,8 +213,8 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.1s">
-          <div class="stars">★★★★★</div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★☆</div>
           <blockquote>"El ambiente es espectacular, ideal para una cita romántica o una salida con amigos."</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">PL</div>
@@ -211,7 +224,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.2s">
+        <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
           <blockquote>"El ramen tonkotsu me transportó a Tokio. Volveré una y otra vez."</blockquote>
           <div class="testimonial-author">
@@ -222,7 +235,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.3s">
+        <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
           <blockquote>"El Lomo Saltado Roll es una locura. Nunca pensé que un sushi nikkei pudiera tener tanto sabor peruano."</blockquote>
           <div class="testimonial-author">
@@ -233,8 +246,8 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.4s">
-          <div class="stars">★★★★★</div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★☆</div>
           <blockquote>"El Mochi de matcha es el postre perfecto. Liviano, cremoso y con ese sabor auténtico que enamora."</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">SC</div>
@@ -244,9 +257,9 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.5s">
+        <div class="testimonial-card reveal">
           <div class="stars">★★★★★</div>
-          <blockquote>"El Black Cod Misoyaki es de otro planeta. Se deshace en la boca. Plato de estrella Michelin, sin duda."</blockquote>
+          <blockquote>"El Black Cod Misoyaki es de otro planeta. Se deshace en la boca. Plato sumamente espectacular, sin duda."</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-avatar">DR</div>
             <div>
@@ -255,45 +268,12 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.6s">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Pidamos lo que pidamos siempre es una fiesta. El servicio es excelente y la comida llega rápido y perfecta."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">LP</div>
-            <div>
-              <h4>Laura P.</h4>
-              <p>Clienta semanal</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.7s">
-          <div class="stars">★★★★★</div>
-          <blockquote>"El Poke Bowl Salmon me salva los días de oficina. Fresco, abundante y a un precio súper razonable."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">TM</div>
-            <div>
-              <h4>Tomás M.</h4>
-              <p>Delivery recurrente</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal" style="transition-delay:0.8s">
-          <div class="stars">★★★★★</div>
-          <blockquote>"El Bao Bun de Pork Belly es el mejor que comí en Buenos Aires. La panceta se deshace, el pan es esponjoso perfecto."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">JV</div>
-            <div>
-              <h4>Julián V.</h4>
-              <p>Foodie de alma</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / RESERVA -->
-  <section id="contact">
+  <!-- CONTACTO / RESERVA -->
+  <section id="contact" aria-label="Contacto y reservas">
     <div class="container">
       <div class="menu-header reveal">
         <p class="section-label">Contacto</p>
@@ -308,29 +288,31 @@
             <div class="icon">📍</div>
             <div>
               <strong>Dirección</strong><br>
-              Av. del Sabor 1234, CABA
+              Blvd. Oroño 70, Rosario, Santa Fe
             </div>
           </div>
           <div class="contact-detail">
             <div class="icon">📞</div>
             <div>
               <strong>Teléfono</strong><br>
-              +54 11 5555-6789
+              <a href="tel:+543414372809">+54 341 437-2809</a>
             </div>
           </div>
           <div class="contact-detail">
             <div class="icon">✉️</div>
             <div>
               <strong>Email</strong><br>
-              hola@sushiclub.com
+              <a href="mailto:sushiclubrosario@gmail.com">sushiclubrosario@gmail.com</a>
             </div>
           </div>
           <div class="contact-detail">
             <div class="icon">🕐</div>
             <div>
               <strong>Horarios</strong><br>
-              Lun–Sáb: 12:00–23:00<br>
-              Dom: 18:00–23:00
+              Lun–Mié: 12:00–01:00<br>
+              Jue: 12:00–01:30<br>
+              Vie–Sáb: 12:00–02:00<br>
+              Dom: 12:00–01:00
             </div>
           </div>
         </div>
@@ -382,15 +364,10 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
+  <!-- PIE DE PÁGINA -->
+  <footer role="contentinfo">
+    <div class="container" style="justify-content:center;text-align:center">
       <p>&copy; 2026 Sushi Club. Todos los derechos reservados.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="WhatsApp">WhatsApp</a>
-      </div>
     </div>
   </footer>
 

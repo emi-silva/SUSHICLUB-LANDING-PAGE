@@ -1,0 +1,19 @@
+// ==============================
+// MAIN — Importa todos los partials
+// ==============================
+
+@use 'variables' as *;
+@use 'reset';
+@use 'nav';
+@use 'hero';
+@use 'sections';
+@use 'menu';
+@use 'about';
+@use 'gallery';
+@use 'testimonials';
+@use 'contact';
+@use 'footer';
+@use 'animations';
+@use 'lightbox';
+@use 'toast';
+@use 'scroll-top';

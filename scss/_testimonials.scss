@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+// ==============================
+// OPINIONES
+// ==============================
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: 32px;
+
+  .stars {
+    color: $star;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+  }
+
+  blockquote {
+    color: $text-muted;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 0.8rem;
+  }
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $accent, $accent-hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+// Retrasos escalonados para animación
+@for $i from 1 through 6 {
+  .testimonial-card:nth-child(#{$i}) { transition-delay: ($i - 1) * 0.1s; }
+}

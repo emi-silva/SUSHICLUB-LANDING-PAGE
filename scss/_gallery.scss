@@ -1,0 +1,91 @@
+@use 'variables' as *;
+
+// ==============================
+// GALERÍA
+// ==============================
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  border-radius: $radius-card;
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  border: 1px solid $border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  transition: all $normal;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    border-color: rgba(220, 20, 60, 0.3);
+    transform: scale(1.03);
+  }
+
+  &.gallery-img {
+    font-size: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.15);
+      transition: background $normal;
+    }
+
+    &:hover::after {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+// Fondos de fallback para items sin imagen
+$gallery-fallbacks: (
+  1: linear-gradient(135deg, #1c1917, #292524),
+  2: linear-gradient(135deg, #1a1a2e, #16213e),
+  3: linear-gradient(135deg, #1a1a1a, #2d1b1b),
+  4: linear-gradient(135deg, #0f1a0f, #1a2e1a),
+  5: linear-gradient(135deg, #2d1b1b, #1a1a1a),
+  6: linear-gradient(135deg, #16213e, #1a1a2e),
+  7: linear-gradient(135deg, #292524, #1c1917),
+  8: linear-gradient(135deg, #1a2e1a, #0f1a0f),
+  9: linear-gradient(135deg, #1a1a2e, #0f1a2e),
+  10: linear-gradient(135deg, #2d1b1b, #1a1a1a),
+  11: linear-gradient(135deg, #1c1917, #292524),
+  12: linear-gradient(135deg, #1a2e1a, #16213e),
+);
+
+@each $i, $gradient in $gallery-fallbacks {
+  .gallery-item:nth-child(#{$i}):not(.gallery-img) {
+    background: $gradient;
+  }
+}
+
+// Retrasos escalonados para animación
+@for $i from 1 through 12 {
+  .gallery-item:nth-child(#{$i}) { transition-delay: ($i - 1) * 0.04s; }
+}
+
+// Responsivo
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
